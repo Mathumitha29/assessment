@@ -10,6 +10,7 @@ Step 1:
  
 Step 2:
  Enter the following command in the terminal
+ 
  $ docker-compose up --build
  
 Step 3: 
@@ -28,6 +29,7 @@ Step 2:
     
 Step 3:
     open the project terminal once the build is successful and type the below command
+    
     $ adb devices
     $ adb reverse tcp:8080 tcp:8080
     
