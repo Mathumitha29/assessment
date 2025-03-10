@@ -10,8 +10,8 @@ Step 1:
  
 Step 2:
  Enter the following command in the terminal
- 
- $ docker-compose up --build
+
+    $ docker-compose up --build
  
 Step 3: 
  Make sure it starts the localhost and now it's ready to use
