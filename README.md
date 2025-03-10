@@ -11,6 +11,8 @@ Step 1:
 Step 2:
  Enter the following command in the terminal
 
+    $ go mod tidy
+ 
     $ docker-compose up --build
  
 Step 3: 
