@@ -4,6 +4,7 @@ Online assessment  Product listing project contains golang project and android p
 # products
 -> golang project  
 -> Follow the below steps to start the project
+
 Step 1:
  Open the project terminal
  
@@ -18,6 +19,7 @@ Step 3:
 # ProductListing
  -> Android (Kotlin) Project
  -> Follow the below steps to start the project
+ 
 Step 1: 
     Open the project in Android Studio
     
