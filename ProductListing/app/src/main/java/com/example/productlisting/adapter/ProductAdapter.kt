@@ -17,7 +17,6 @@ class ProductAdapter (private val onItemClick: (Product) -> Unit) : RecyclerView
 
     fun setProducts(products: List<Product>) {
         this.productList = products
-        println("ProductAdapter: $products")
         notifyDataSetChanged()
     }
 

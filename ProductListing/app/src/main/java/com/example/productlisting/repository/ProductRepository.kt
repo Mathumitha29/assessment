@@ -16,10 +16,8 @@ class ProductRepository {
     private val api = RetrofitClient.instance
 
     fun getProducts(onResult: (List<Product>?) -> Unit) {
-        println("HELLO PRODUCT!!")
         api.getProducts().enqueue(object : Callback<List<Product>> {
             override fun onResponse(call: Call<List<Product>>, response: Response<List<Product>>) {
-                println("HELLO PRODUCT!! : ${response.body()}")
                 if( response.isSuccessful) {
                     onResult(response.body())
                 }else {
@@ -28,7 +26,6 @@ class ProductRepository {
             }
 
             override fun onFailure(call: Call<List<Product>>, t: Throwable) {
-                println("HELLO PRODUCT!! FAILED $t")
                 onResult(null)
             }
 
@@ -37,10 +34,8 @@ class ProductRepository {
     }
 
     fun createProduct(product: Product, onResult: (Product?) -> Unit) {
-        println("HELLO PRODUCT!!")
         api.createProduct(product).enqueue(object : Callback<Product> {
             override fun onResponse(call: Call<Product>, response: Response<Product>) {
-                println("HELLO PRODUCT!! : $response")
                 if(response.isSuccessful) {
                     onResult(response.body())
                 }else {
@@ -57,11 +52,8 @@ class ProductRepository {
     }
 
     fun updateProduct(id: Int, product: Product, onResult: (Product?) -> Unit) {
-        println("UPDATE PRODUCT:: ${product}")
         api.updateProduct(id,product).enqueue(object : Callback<Product> {
             override fun onResponse(call: Call<Product>, response: Response<Product>) {
-                println("UPDATE PRODUCT:: $response")
-                println("UPDATE PRODUCT:: ${response.body()}")
                 if(response.isSuccessful) {
                     onResult(response.body())
                 }else {
@@ -70,7 +62,6 @@ class ProductRepository {
             }
 
             override fun onFailure(call: Call<Product>, t: Throwable) {
-                println("UPDATE PRODUCT:: $t")
                 onResult(null)
             }
 

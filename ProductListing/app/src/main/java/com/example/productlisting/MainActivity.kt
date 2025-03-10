@@ -110,7 +110,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fetchProducts() {
-        println("HELLO FETCH!!")
         repository.getProducts { fetchedProducts ->
             fetchedProducts?.let {
                 products = it
